@@ -9,32 +9,22 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import ConfirmationNumberIcon from "@mui/icons-material/ConfirmationNumber";
+import { mockData } from "../../../apis/mock-data";
+import { cloneDeep } from "lodash";
 function App_bar() {
-  const videoTrailer = [
-    {
-      image: image1,
-      url: "https://youtube.com/embed/0J51aUryra4",
-      title:
-        "LẬT MẶT 7: MỘT ĐIỀU ƯỚC | OFFICIAL TRAILER | Khởi chiếu 26.04.2024",
-    },
-    {
-      image: image2,
-      url: "https://www.youtube.com/embed/Z0EL1PDgPS0",
-      title: "HÀNH TINH KHỈ: VƯƠNG QUỐC MỚI trailer - KC: 10.05.2024",
-    },
-  ];
+  const movieDetails = cloneDeep(mockData.apiMovie.movie);
+  console.log("movieDetails", movieDetails);
+
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [trailerState, setTrailerState] = useState(false);
   const [urlTrailer, setUrlTrailer] = useState("");
   const [trailerTitle, setTrailerTitle] = useState("");
 
-  const openTrailer = (url,title) => {
-
-    setTrailerTitle(title)
+  const openTrailer = (url, title) => {
+    setTrailerTitle(title);
     setUrlTrailer(url);
     setTrailerState(true);
-    console.log("trailerState", trailerState);
   };
 
   const closeTrailer = () => {
@@ -44,7 +34,6 @@ function App_bar() {
 
   const showSlide = useCallback((index) => {
     const slides = document.querySelectorAll(".slide");
-    console.log("slides", slides);
     let newSlideIndex = index;
 
     //Đoạn này để set index về 0 nếu banner đến vị trí cuối cùng
@@ -58,7 +47,6 @@ function App_bar() {
 
     // Lấy giá trị px của width để tính toán
     const slideWidth = slides[newSlideIndex].clientWidth;
-    console.log("slideWidth", slideWidth);
     document.querySelector(".slides").style.transform = `translateX(${
       -slideWidth * newSlideIndex
     }px)`;
@@ -114,7 +102,7 @@ function App_bar() {
               width: "100%",
             }}
           >
-            {videoTrailer.map((slide, index) => (
+            {movieDetails.map((slide, index) => (
               <Box
                 key={index}
                 className="slide"
@@ -132,7 +120,7 @@ function App_bar() {
                       variant="contained"
                       size="large"
                       endIcon={<OndemandVideoIcon />}
-                      onClick={() => openTrailer(slide.url,slide.title)}
+                      onClick={() => openTrailer(slide.trailerUrl, slide.title)}
                     >
                       Watch Trailer
                     </Button>
@@ -157,9 +145,13 @@ function App_bar() {
                   </Stack>
                 </Box>
                 <img
-                  src={slide.image}
+                  src={slide.imageBanner}
                   alt={`Phim ${index + 1}`}
-                  style={{ width: "100%" }}
+                  style={{
+                    width: "100%",
+                    height: "429.562px",
+                    objectFit: "cover",
+                  }}
                 />
               </Box>
             ))}

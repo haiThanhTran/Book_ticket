@@ -1,207 +1,125 @@
 export const mockData = {
-  board: {
-    _id: "board-id-01",
-    title: "haiThanhTran",
-    description: "Pro MERN stack Course",
+  apiMovie: {
+    _id: "apiMovie-id-01",
+    title: "Movie-Booking-Ticket",
+    description:
+      "This is a first website about booking movie ticket,i will build based on MernStack (MongoDB,ExpressJS,ReactJS,NodeJS)",
     type: "public", // 'private'
     ownerIds: [], // Những users là Admin của board
-    memberIds: [], // Những users là member bình thường của board
-    columnOrderIds: ['column-id-01', 'column-id-03', "column-id-02","column-id-04"], // Thứ tự sắp xếp / vị trí của các Columns trong 1 boards
-    columns: [
+    memberIds: [], // Những users là member bình thường của board,
+    movie: [
       {
-        _id: "column-id-01",
-        boardId: "board-id-01",
-        title: "To Do Column 01",
-        cardOrderIds: [
-          "card-id-01",
-          "card-id-02",
-          "card-id-03",
-          "card-id-04",
-          "card-id-05",
-          "card-id-06",
-          "card-id-07"
-        ],
-        cards: [
-          {
-            _id: "card-id-01",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 01",
-            description: "Markdown Syntax (sẽ ở khóa nâng cao nhé)",
-            cover:
-              "https://th.bing.com/th/id/R.d2ca145b7dd785d21a707f1332e6310e?rik=7TSqCh6WKVEKDg&riu=http%3a%2f%2f2.bp.blogspot.com%2f-DqtqMFDXtfw%2fUlpn3NM4btI%2fAAAAAAAAALc%2ffSVPwRwj0KE%2fs1600%2fdien%2bbien%2bphu%2b2.jpg&ehk=eriaOdoUmbZQDsElhrtedc4xfZvnYHK2EgSVFY6Fh04%3d&risl=&pid=ImgRaw&r=0",
-            memberIds: ["test-user-id-01"],
-            comments: ["test comment 01", "test comment 02"],
-            attachments: [
-              "test attachment 01",
-              "test attachment 02",
-              "test attachment 03",
-            ],
-          },
-          {
-            _id: "card-id-02",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 02",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-03",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 03",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-04",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 04",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-05",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 05",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-06",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 06",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-07",
-            boardId: "board-id-01",
-            columnId: "column-id-01",
-            title: "Title of card 07",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-        ],
+        _id: "apiMovie-id-01",
+        appId: "board-id-01",
+        title:
+          "LẬT MẶT 7: MỘT ĐIỀU ƯỚC | OFFICIAL TRAILER | Khởi chiếu 26.04.2024",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11399_105_100010.jpg",
+        trailerUrl: "https://youtube.com/embed/0J51aUryra4",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11399_103_100004.jpg",
+        rateStart: "",
       },
       {
-        _id: "column-id-02",
-        boardId: "board-id-01",
-        title: "Inprogress Column 02",
-        cardOrderIds: ["card-id-08", "card-id-09", "card-id-10"],
-        cards: [
-          {
-            _id: "card-id-08",
-            boardId: "board-id-01",
-            columnId: "column-id-02",
-            title: "Title of card 08",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-09",
-            boardId: "board-id-01",
-            columnId: "column-id-02",
-            title: "Title of card 09",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-10",
-            boardId: "board-id-01",
-            columnId: "column-id-02",
-            title: "Title of card 10",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-        ],
+        _id: "apiMovie-id-02",
+        appId: "board-id-01",
+        title: "HÀNH TINH KHỈ: VƯƠNG QUỐC MỚI trailer - KC: 10.05.2024",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11395_105_100001.jpg",
+        trailerUrl: "https://youtube.com/embed/0J51aUryra4",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11395_103_100002.jpg",
+        rateStart: "",
       },
       {
-        _id: "column-id-03",
-        boardId: "board-id-01",
-        title: "Done Column 03",
-        cardOrderIds: ["card-id-11", "card-id-12", "card-id-13"],
-        cards: [
-          {
-            _id: "card-id-11",
-            boardId: "board-id-01",
-            columnId: "column-id-03",
-            title: "Title of card 11",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-12",
-            boardId: "board-id-01",
-            columnId: "column-id-03",
-            title: "Title of card 12",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-          {
-            _id: "card-id-13",
-            boardId: "board-id-01",
-            columnId: "column-id-03",
-            title: "Title of card 13",
-            description: null,
-            cover: null,
-            memberIds: [],
-            comments: [],
-            attachments: [],
-          },
-        ],
+        _id: "apiMovie-id-03",
+        appId: "board-id-01",
+        title: "VÂY HÃM: KẺ TRỪNG PHẠT",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11402_105_100008.jpg",
+        trailerUrl: "https://youtube.com/embed/XTI1j_bgREY",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11402_103_100004.jpg",
+        rateStart: "",
       },
       {
-        _id: "column-id-04",
-        boardId: "board-id-01",
-        title: "Empty Column 04",
-        cardOrderIds: ["column-id-04-placeholder-card"],
-        cards: [
-          {
-            _id: "column-id-04-placeholder-card",
-            boardId: "board-id-01",
-            columnId: "column-id-04",
-            FE_PlaceholderCard:true,
-          }
-        ],
+        _id: "apiMovie-id-04",
+        appId: "board-id-01",
+        title: "HAIKYU: TRẬN CHIẾN BÃI PHẾ LIỆU",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11461_105_100001.jpg",
+        trailerUrl: "https://youtube.com/embed/OFB4mrupFX0",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11461_103_100001.jpg",
+        rateStart: "",
       },
+      {
+        _id: "apiMovie-id-05",
+        appId: "board-id-01",
+        title: "HAIKYU: TRẬN CHIẾN BÃI PHẾ LIỆU",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11423_105_100002.jpg",
+        trailerUrl: "https://youtube.com/embed/iwKJ-qxo-t8",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11423_103_100003.jpg",
+        rateStart: "",
+      },
+      {
+        _id: "apiMovie-id-06",
+        appId: "board-id-01",
+        title:
+          "LẬT MẶT 7: MỘT ĐIỀU ƯỚC | OFFICIAL TRAILER | Khởi chiếu 26.04.2024",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11399_105_100010.jpg",
+        trailerUrl: "https://youtube.com/embed/0J51aUryra4",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11399_103_100004.jpg",
+        rateStart: "",
+      },
+      {
+        _id: "apiMovie-id-07",
+        appId: "board-id-01",
+        title: "HÀNH TINH KHỈ: VƯƠNG QUỐC MỚI trailer - KC: 10.05.2024",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11395_105_100001.jpg",
+        trailerUrl: "https://youtube.com/embed/0J51aUryra4",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11395_103_100002.jpg",
+        rateStart: "",
+      },
+      {
+        _id: "apiMovie-id-08",
+        appId: "board-id-01",
+        title: "VÂY HÃM: KẺ TRỪNG PHẠT",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11402_105_100008.jpg",
+        trailerUrl: "https://youtube.com/embed/XTI1j_bgREY",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202404/11402_103_100004.jpg",
+        rateStart: "",
+      },
+      {
+        _id: "apiMovie-id-09",
+        appId: "board-id-01",
+        title: "HAIKYU: TRẬN CHIẾN BÃI PHẾ LIỆU",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11461_105_100001.jpg",
+        trailerUrl: "https://youtube.com/embed/OFB4mrupFX0",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11461_103_100001.jpg",
+        rateStart: "",
+      },
+      {
+        _id: "apiMovie-id-10",
+        appId: "board-id-01",
+        title: "HAIKYU: TRẬN CHIẾN BÃI PHẾ LIỆU",
+        imageBanner:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11423_105_100002.jpg",
+        trailerUrl: "https://youtube.com/embed/iwKJ-qxo-t8",
+        image:
+          "https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202405/11423_103_100003.jpg",
+        rateStart: "",
+      }
     ],
   },
 };
